@@ -1,6 +1,12 @@
 # ESIT ULL Grado de Informática
 ## PROCESADORES DE LENGUAJES. Implementación de un analizador de PL0 en PEGjs.
-#### Realizada por Eduardo Escobar Alberto y Alejandro Marrero Díaz.
+### Realizada por Eduardo Escobar Alberto y Alejandro Marrero Díaz.
+
+#### Enlaces de interés
+
+* [Despliegue en Heroku](https://pl0-parser-eda.herokuapp.com/)
+* [PL0](https://en.wikipedia.org/wiki/Recursive_descent_parser)
+* [PEGJS](http://pegjs.org/)
 
 A continuación se pasará a explicar con detalles las características del analizador así como la sintaxis aceptada para cada tipo de sentencia y/o expresión definida en el lenguaje.
 
@@ -18,7 +24,7 @@ block
   = constantDeclaration? variableDeclaration? functionDeclaration* statement*
 ```
 
-#### Declaración de constantes
+##### Declaración de constantes
 
 ```js
 constantDeclaration
@@ -154,3 +160,5 @@ STRING            = _ ([a-zA-Z0-9_ ]*)_
 ID "identifier"   = _ $([a-zA-Z_][a-zA-Z_0-9]*) _
 NUMBER "number"   = _ $[0-9]+ _
 ```
+#### INTERFAZ GRÁFICA DEL ANALIZADOR
+![](interfaz/interfaz_grafica.png)
